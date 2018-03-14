@@ -11,8 +11,9 @@ Further examples will come later.
 import easier68k
 from easier68k.core.enum.register import Register
 
-if __name__ == '__main__':
+print('using easier68k version {}'.format(easier68k.__version__))
 
+if __name__ == '__main__':
     # create a simulator object
     sim = easier68k.simulator.m68k.M68K()
 
