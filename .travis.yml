@@ -5,3 +5,4 @@ install:
   - python -m pip install -r requirements.txt
 script:
   - python sample_app.py
+  - python run_s68k.py helloworld.S68
