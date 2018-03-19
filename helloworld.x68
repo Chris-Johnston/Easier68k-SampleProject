@@ -7,7 +7,7 @@ start   ORG    $1000
         LEA     MSG, A1 
         MOVE.B  #14, D0 
         TRAP    #15     
-s
+
         ; halt
         MOVE.B  #9, D0
         TRAP    #15

@@ -31,7 +31,8 @@ if __name__ == '__main__':
 
         print()
         print('List file contents: ')
-        print(listfile)
+        pretty_json = json.loads(listfile.to_json())
+        print(json.dumps(pretty_json, indent=4, sort_keys=True))
 
         print('---- Starting execution ----')
         sim.load_list_file(listfile)
