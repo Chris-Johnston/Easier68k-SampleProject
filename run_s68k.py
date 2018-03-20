@@ -26,13 +26,14 @@ if __name__ == '__main__':
 
     print()
     print('List file contents: ')
-    print(lf.to_json())
+    pretty_json = json.loads(lf.to_json())
+    print(json.dumps(pretty_json, indent=4, sort_keys=True))
 
     print('---- Starting execution ----')
     sim.load_list_file(lf)
     sim.clock_auto_cycle = True
     while not sim.halted:
-        print(hex(sim.get_program_counter_value()))
+        print(sim.get_program_counter_value())
         sim.step_instruction()
 
 
